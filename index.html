@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora brainrott</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 20px;">
+    <!-- Videito izquierdo-->
+    <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+      <div style="width: 100%; aspect-ratio: 16/9; background: #111; border-radius: 8px; overflow: hidden; border: 2px solid #00ff00;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i0M4ARe9v0Y?autoplay=1&mute=1" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%;"></iframe>
+      </div>
+      <!-- Bloc de notas yeaa -->
+      <div style="width: 100%; margin-top: 20px;">
+        <h3 style="color:#00ff00; font-size:14px; margin:0 0 5px 0;">Bloc de notas</h3>
+        <textarea id="notepad" style="width:100%;height:80px;background:#222;color:#00ff00;border:1px solid #00ff00;border-radius:5px;padding:5px;font-size:12px;"></textarea>
+        <button onclick="saveNote()" style="margin-top:5px;background:#00ff00;color:#222;border:none;padding:5px 10px;border-radius:5px;cursor:pointer;font-size:12px;">Guardar</button>
+        <span id="note-status" style="color:#00ff00;font-size:11px;margin-left:10px;"></span>
+      </div>
+    </div>
+    <!-- Calculadora uwu -->
+    <div style="display: flex; flex-direction: column; align-items: center;">
+      <div class="calculator" style="position: relative; overflow: hidden; margin: 0 auto; width: 320px; max-width: 100vw;">
+        <img id="calculator-bg-img" src="https://i.pinimg.com/474x/29/4a/4d/294a4da4cbb70443c9ba9bb173978000.jpg" class="calculator-bg" alt="Fondo calculadora" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 0; pointer-events: none;" />
+        <div class="display" id="display" style="position: relative; z-index: 1;">0</div>
+      <div class="buttons" style="position: relative; z-index: 1;">
+      <button class="btn function" onclick="clearAll()">AC</button>
+      <button class="btn function" onclick="deleteLast()">DEL</button>
+      <button class="btn operator" onclick="append('%')">%</button>
+      <button class="btn operator" onclick="append('/')">÷</button>
+
+      <button class="btn" onclick="append('7')">7</button>
+      <button class="btn" onclick="append('8')">8</button>
+      <button class="btn" onclick="append('9')">9</button>
+      <button class="btn operator" onclick="append('*')">×</button>
+
+      <button class="btn" onclick="append('4')">4</button>
+      <button class="btn" onclick="append('5')">5</button>
+      <button class="btn" onclick="append('6')">6</button>
+      <button class="btn operator" onclick="append('-')">−</button>
+
+      <button class="btn" onclick="append('1')">1</button>
+      <button class="btn" onclick="append('2')">2</button>
+      <button class="btn" onclick="append('3')">3</button>
+      <button class="btn operator" onclick="append('+')">+</button>
+
+      <button class="btn" onclick="append('0')">0</button>
+      <button class="btn" onclick="append('.')">.</button>
+      <button class="btn operator" onclick="append('^')">^</button>
+      <button class="btn equal" onclick="calculate()">=</button>
+
+      <button class="btn sci" onclick="append('sqrt(')">√</button>
+      <button class="btn sci" onclick="append('cos(')">cos</button>
+      <button class="btn sci" onclick="append('tan(')">tan</button>
+      <button class="btn sci" onclick="append('(')">(</button>
+      <button class="btn sci" onclick="append(')')">)</button>
+    </div>
+    </div>
+    </div>
+    <!-- Videto derecho -->
+    <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+      <div style="width: 100%; aspect-ratio: 16/9; background: #111; border-radius: 8px; overflow: hidden; border: 2px solid #00ff00;">
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3lAOdrskl1Y?autoplay=1&mute=1" frameborder="0" allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="width:100%; height:100%;"></iframe>
+      </div>
+      <!-- Registro de secuencias shi -->
+      <div style="width: 100%; margin-top: 20px;">
+        <h3 style="color:#00ff00; font-size:14px; margin:0 0 5px 0;">Registro de secuencias</h3>
+        <div id="history-log" style="width:100%;height:80px;background:#222;color:#00ff00;border:1px solid #00ff00;border-radius:5px;padding:5px;font-size:12px;overflow-y:auto;"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
