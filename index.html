@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Título principal arriba de todo -->
+  <h1 class="kirpul-title">THE KIRPUL CALCULATOR</h1>
   <div style="display: flex; flex-direction: row; justify-content: center; align-items: flex-start; gap: 20px;">
     <!-- Videito izquierdo-->
     <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
@@ -26,39 +28,39 @@
       <div class="calculator" style="position: relative; overflow: hidden; margin: 0 auto; width: 320px; max-width: 100vw;">
         <img id="calculator-bg-img" src="https://i.pinimg.com/474x/29/4a/4d/294a4da4cbb70443c9ba9bb173978000.jpg" class="calculator-bg" alt="Fondo calculadora" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.15; z-index: 0; pointer-events: none;" />
         <div class="display" id="display" style="position: relative; z-index: 1;">0</div>
-      <div class="buttons" style="position: relative; z-index: 1;">
-      <button class="btn function" onclick="clearAll()">AC</button>
-      <button class="btn function" onclick="deleteLast()">DEL</button>
-      <button class="btn operator" onclick="append('%')">%</button>
-      <button class="btn operator" onclick="append('/')">÷</button>
+        <div class="buttons" style="position: relative; z-index: 1;">
+          <button class="btn function" onclick="clearAll()">AC</button>
+          <button class="btn function" onclick="deleteLast()">DEL</button>
+          <button class="btn operator" onclick="append('%')">%</button>
+          <button class="btn operator" onclick="append('/')">÷</button>
 
-      <button class="btn" onclick="append('7')">7</button>
-      <button class="btn" onclick="append('8')">8</button>
-      <button class="btn" onclick="append('9')">9</button>
-      <button class="btn operator" onclick="append('*')">×</button>
+          <button class="btn" onclick="append('7')">7</button>
+          <button class="btn" onclick="append('8')">8</button>
+          <button class="btn" onclick="append('9')">9</button>
+          <button class="btn operator" onclick="append('*')">×</button>
 
-      <button class="btn" onclick="append('4')">4</button>
-      <button class="btn" onclick="append('5')">5</button>
-      <button class="btn" onclick="append('6')">6</button>
-      <button class="btn operator" onclick="append('-')">−</button>
+          <button class="btn" onclick="append('4')">4</button>
+          <button class="btn" onclick="append('5')">5</button>
+          <button class="btn" onclick="append('6')">6</button>
+          <button class="btn operator" onclick="append('-')">−</button>
 
-      <button class="btn" onclick="append('1')">1</button>
-      <button class="btn" onclick="append('2')">2</button>
-      <button class="btn" onclick="append('3')">3</button>
-      <button class="btn operator" onclick="append('+')">+</button>
+          <button class="btn" onclick="append('1')">1</button>
+          <button class="btn" onclick="append('2')">2</button>
+          <button class="btn" onclick="append('3')">3</button>
+          <button class="btn operator" onclick="append('+')">+</button>
 
-      <button class="btn" onclick="append('0')">0</button>
-      <button class="btn" onclick="append('.')">.</button>
-      <button class="btn operator" onclick="append('^')">^</button>
-      <button class="btn equal" onclick="calculate()">=</button>
+          <button class="btn" onclick="append('0')">0</button>
+          <button class="btn" onclick="append('.')">.</button>
+          <button class="btn operator" onclick="append('^')">^</button>
+          <button class="btn equal" onclick="calculate()">=</button>
 
-      <button class="btn sci" onclick="append('sqrt(')">√</button>
-      <button class="btn sci" onclick="append('cos(')">cos</button>
-      <button class="btn sci" onclick="append('tan(')">tan</button>
-      <button class="btn sci" onclick="append('(')">(</button>
-      <button class="btn sci" onclick="append(')')">)</button>
-    </div>
-    </div>
+          <button class="btn sci" onclick="append('sqrt(')">√</button>
+          <button class="btn sci" onclick="append('cos(')">cos</button>
+          <button class="btn sci" onclick="append('tan(')">tan</button>
+          <button class="btn sci" onclick="append('(')">(</button>
+          <button class="btn sci" onclick="append(')')">)</button>
+        </div>
+      </div>
     </div>
     <!-- Videto derecho -->
     <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
