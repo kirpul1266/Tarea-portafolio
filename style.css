@@ -252,6 +252,12 @@ h1.kirpul-title {
   text-shadow: 0 0 8px #00ff00, 0 0 2px #000;
   z-index: 10;
   padding: 0 10px;
+  animation: blink-kirpul 1s steps(2, start) infinite;
+}
+
+@keyframes blink-kirpul {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 @media (max-width: 600px) {
