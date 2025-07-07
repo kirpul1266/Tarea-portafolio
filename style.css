@@ -190,3 +190,10 @@ body::after {
   pointer-events: none;
   box-shadow: 0 0 4px #00ff00;
 }
+
+.calculadora {
+  width: 320px;         /* Tamaño fijo recomendado para móviles */
+  max-width: 95vw;      /* Para que no se desborde en pantallas muy pequeñas */
+  margin: 0 auto;       /* Centrar horizontalmente */
+  box-sizing: border-box;
+}
