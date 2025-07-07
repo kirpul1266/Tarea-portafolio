@@ -1,6 +1,7 @@
-let display = document.getElementById('display');
-let expression = '';
+let display = document.getElementById('display'); //esto es la pantalla//
+let expression = ''; // esto guarda la impresao//
 
+// esto hace que se vea en la pantalla y todo la matimatica//
 function append(value) {
   if (value === '^') {
     expression += '**';
@@ -15,19 +16,21 @@ function append(value) {
   } else {
     expression += value;
   }
-  display.textContent = expression;
+  display.textContent = expression; // eto lo actualiza raa //
 }
 
+// esto reinicia //
 function clearAll() {
   expression = '';
   display.textContent = '0';
 }
+// esto borra el ultimo bicho //
 
 function deleteLast() {
   expression = expression.slice(0, -1);
   display.textContent = expression || '0';
 }
-
+// eto orserva y analisa y lo muetra //
 function calculate() {
   try {
     let result = eval(expression);
@@ -44,7 +47,7 @@ function toRadians(degrees) {
   return degrees * (Math.PI / 180);
 }
 
-// Guardar y cargar notas
+// Guardar y cargar notas //
 function saveNote() {
   const note = document.getElementById('notepad').value;
   localStorage.setItem('calculator_note', note);
