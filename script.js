@@ -59,7 +59,7 @@ window.addEventListener('DOMContentLoaded', () => {
   if (saved) document.getElementById('notepad').value = saved;
 });
 
-// Registro de secuencias
+// Registro de secuencias //
 let historyLog = [];
 function addToHistory(entry) {
   historyLog.push(entry);
