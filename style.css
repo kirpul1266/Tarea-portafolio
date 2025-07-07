@@ -15,6 +15,9 @@ body {
   background-image: url('https://i.pinimg.com/originals/87/a1/d8/87a1d82fb5bc9d1e9baee8d72739b656.gif'); /* Cambia esta URL por tu GIF */
   background-repeat: repeat;
   background-size: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-width: 100vw;
 }
 
 .calculator {
@@ -135,16 +138,6 @@ body {
   }
 }
 
-/* Ajuste para que el video se vea bien en móviles */
-@media (max-width: 900px) {
-  video, .calculator video {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block;
-    margin: 10px auto !important;
-  }
-}
 
 @media (min-width: 901px) {
   body > div {
@@ -173,6 +166,40 @@ body {
     padding: 20px !important;
   }
 }
+
+
+/* Estilos para móviles */
+@media (max-width: 600px) {
+  body, body > div, .container, .main, .content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 270px 0 0 0 !important; /* <-- Más espacio arriba para el video */
+    box-sizing: border-box !important;
+  }
+  .calculator, .calculadora {
+    width: 100% !important;
+    max-width: 400px !important;
+    margin: 12px 0 !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
+  .display, .buttons {
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin: 0 !important;
+  }
+  img, video, .calculator video {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 10px 0 !important;
+  }
+}
+
 /* marca de agua papa */
 body::after {
   content: "Creado por kirpul!!💖💖💖";
@@ -196,4 +223,38 @@ body::after {
   max-width: 95vw;      /* Para que no se desborde en pantallas muy pequeñas */
   margin: 0 auto;       /* Centrar horizontalmente */
   box-sizing: border-box;
+}
+
+h1.kirpul-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  color: #00ff00;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  text-align: center;
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.kirpul-title {
+  width: 100%;
+  text-align: center;
+  color: #00ff00;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.3rem;
+  margin: 32px 0 12px 0;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px #00ff00, 0 0 2px #000;
+}
+
+@media (max-width: 600px) {
+  .kirpul-title {
+    font-size: 1rem;
+    margin: 24px 0 8px 0;
+  }
 }
