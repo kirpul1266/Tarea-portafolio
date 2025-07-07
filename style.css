@@ -275,3 +275,16 @@ h1.kirpul-title {
 }
 
 /* El resto de tus estilos permanece igual */
+
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  body > div > div:first-child > div {
+    width: 100% !important;
+    max-width: 400px !important;
+  }
+}
+
+/* El resto de tus estilos permanece igual */
