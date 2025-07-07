@@ -250,11 +250,28 @@ h1.kirpul-title {
   margin: 32px 0 12px 0;
   letter-spacing: 2px;
   text-shadow: 0 0 8px #00ff00, 0 0 2px #000;
+  z-index: 10;
+  padding: 0 10px;
 }
 
 @media (max-width: 600px) {
   .kirpul-title {
     font-size: 1rem;
     margin: 24px 0 8px 0;
+    position: static;
+    max-width: 100%;
+  }
+  /* Ordena el bloc de notas al final del primer bloque (video + bloc de notas) */
+  body > div > div:first-child {
+    display: flex !important;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+  body > div > div:first-child > div {
+    width: 100% !important;
+    max-width: 400px !important;
   }
 }
+
+/* El resto de tus estilos permanece igual */
